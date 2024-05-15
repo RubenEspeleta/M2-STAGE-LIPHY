@@ -38,3 +38,4 @@ Q_co2_inverse=np.tan(55.837*np.pi/180)*60*scaling_volume_co2_inverse   ## Formul
 Q_co2_ruben_inverse=S*np.tan(55.837*np.pi/180)*60*2.6/98  ## Formule Ruben
 print('Debit co2 measuré debitmètre air formule Cecile: ', Q_co2_inverse)
 print('Debit co2 measuré debitmètre air formule Ruben: ', Q_co2_ruben_inverse)
+
