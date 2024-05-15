@@ -25,7 +25,7 @@ theta_co2_15=80.879
 theta_co2_50=86.722
 theta_co2_100=88.475
 
-Q_attendu=np.array([59.13, 80, 106, 150, 500, 1000])
+Q_attendu=np.array([80, 150, 500, 1000])     ## Il manque 59.13 et 106
 
 scaling_volume_air_80=50/longeur50ml_8
 scaling_volume_air_150=50/longeur50ml_15
