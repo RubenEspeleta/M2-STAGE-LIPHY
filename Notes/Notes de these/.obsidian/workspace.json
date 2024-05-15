@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "429ea317f8b42e69",
+    "type": "split",
+    "children": [
+      {
+        "id": "153923196b0f4025",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2cdb4216681ca4e4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "89254e5abac9ea8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "16401b8d4642c840",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34106b5e180558b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1ccc7d34c32a9801",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "708a447e0a07a8ea",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1d3b5f6a9f8a93a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d02b3ff7deacad7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58ae8d4bcfa9c782",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5369ebff7f5d6cd1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9efc21b4a684f545",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7cd7838c679c74d0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "2cdb4216681ca4e4",
+  "lastOpenFiles": [
+    "Excalidraw/Drawing 2024-03-05 12.03.40.excalidraw.md",
+    "Excalidraw/Drawing 2024-05-06 10.34.41.excalidraw.md",
+    "Excalidraw/Drawing 2024-05-06 10.34.41.excalidraw_3.png",
+    "Excalidraw/Drawing 2024-05-06 10.34.41.excalidraw.png",
+    "Excalidraw/Drawing 2024-05-06 10.34.41.excalidraw_2.png",
+    "Excalidraw/Colonne_3D.png",
+    "Excalidraw/Modèle proposé par Cecile pour expliquer la diffusion, convection du CO2 dans l'air et l'inverse.md",
+    "Excalidraw/Drawing 2024-03-22 15.31.42.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-05 15.23.36.excalidraw.png",
+    "Excalidraw/Drawing 2024-03-05 15.23.36.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-05 12.03.40.excalidraw.png",
+    "Excalidraw/Drawing 2024-03-05 11.52.13.excalidraw.md",
+    "Excalidraw",
+    "Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}
