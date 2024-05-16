@@ -68,16 +68,16 @@ ax1.scatter(Q_attendu, Q_experimentales_air, label='air', color='blue')
 ax1.plot(Q_attendu, linear_fit_air, color='blue', label=f'Linear Fit air (slope={slope_air:.2f})')
 ax1.plot(Q_attendu, y, color='black', label='Identity (slope=1)')
 # Set ticks for the primary y-axis
-ax1.set_ylabel('Q experimentales air (ml/min)')
+ax1.set_ylabel('Q experimentales air (ml/min)', fontsize=20)
 ax1.set_yticks(Q_experimentales_air)
 ax1.set_yticklabels(Q_experimentales_air)
 plt.legend()
-plt.xlabel('Q attendu (ml/min)')
+plt.xlabel('Q attendu (ml/min)', fontsize=20)
 plt.grid(True)
 
 # Create a second y-axis on the right side
 ax2 = ax1.twinx()
-ax2.set_ylabel('Q experimentales CO2 (ml/min)')  # Set label for the secondary y-axis
+ax2.set_ylabel('Q experimentales CO2 (ml/min)', fontsize=20)  # Set label for the secondary y-axis
 ax2.scatter(Q_attendu, Q_experimentales_co2, label='CO2', color='red')
 ax2.plot(Q_attendu, linear_fit_co2, color='red', label=f'Linear Fit CO2 (slope={slope_co2:.2f})')
 ax2.set_yticks(Q_experimentales_co2)

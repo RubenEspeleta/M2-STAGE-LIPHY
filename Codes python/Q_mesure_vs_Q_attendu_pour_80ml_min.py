@@ -33,6 +33,9 @@ Q_air_ruben_inverse=S*np.tan(75.981*np.pi/180)*60*2.6/96  ## Formule Ruben
 print('Debit air measuré debitmètre CO2 formule Cecile: ', Q_air_inverse)
 print('Debit air measuré debitmètre CO2 formule Ruben: ', Q_air_ruben_inverse)
 
+Q_air_corrected=np.tan(72.72*np.pi/180)*60*50/122   ## Avec la formule de Cecile et une consige de
+
+
 ## CO2
 scaling_volume_co2_inverse=50/98
 Q_co2_inverse=np.tan(55.837*np.pi/180)*60*scaling_volume_co2_inverse   ## Formule Cecile
@@ -40,7 +43,7 @@ Q_co2_ruben_inverse=S*np.tan(55.837*np.pi/180)*60*2.6/98  ## Formule Ruben
 print('Debit co2 measuré debitmètre air formule Cecile: ', Q_co2_inverse)
 print('Debit co2 measuré debitmètre air formule Ruben: ', Q_co2_ruben_inverse)
 
-
+Q_co2_corrected=np.tan(73.020*np.pi/180)*60*50/126    ### Avec la formule de Cecile et une consigne de 
 
 theta_co2_8=68.259
 longeur50ml_8_co2=117
