@@ -22,12 +22,14 @@ file_paths=[#'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mo
             #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv', ## Tests avec 450ml de SDS 70% de la CMC sans colorant
             #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_vidange_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_remplissage_8_co2.csv', ### Tests sans mousse pour comparer
-            '/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_vidange_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/test_colonne_mai_vidange_8_co2.csv']
-            #'/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_remplissage_8_co2.csv', ##  Test sans surfactant (eau pure)
-            #'/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv']
+            #'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_remplissage_8_co2.csv', ### Tests sans mousse pour comparer,
+            #'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_vidange_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_remplissage_8_co2.csv', ##  Test sans surfactant (eau pure)
+            '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv',
+            #'/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv',           ### Mois de mai
+            #'/home/stage/M2-Stage-Liphy/test_colonne_mai_vidange_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/remplissage_300_ml_eau_no_surfactant_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv']
 fig, ax = plt.subplots()
 for file_path in file_paths:
     db=pd.read_csv(file_path)
@@ -82,7 +84,18 @@ for file_path in file_paths:
             label='Vidange sans mousse mois du mai'
         else:
             label='Remplissage sans mousse mois du mai'
-            
+    if 'surfactant' in file_path:
+        db=pd.read_csv(file_path)
+        y=(db['Media value concentration']/100)*100/(db['Media value concentration'].max()/100)
+        if 'vidange' in file_path:
+            label='Vidange eau pure 300 ml mois du mai'
+        else:
+            label='Remplissage eau pure 300 ml mois du mai'
+
+
+
+
+        
     percentage = int(file_path.split('_')[-2])
     # plt.scatter(x,y,label=f'Test {label} {percentage*10} ml/min CO2', marker='o', s=1)
     # plt.xlabel('Temps (s)')
