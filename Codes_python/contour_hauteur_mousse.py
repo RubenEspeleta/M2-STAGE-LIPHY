@@ -12,9 +12,9 @@ import pandas as pd
 
 ### Experience 70% CMC du SDS ###
 
-file_path='/home/ruben/Escritorio/Points_1_partie_image.csv'
-file_path_2='/home/ruben/Escritorio/Points_2_partie_image.csv'
-file_path_3='/home/ruben/Escritorio/Points_countour_image_450ml.csv'
+file_path='/home/stage/M2-Stage-Liphy/Points_1_partie_image.csv'
+file_path_2='/home/stage/M2-Stage-Liphy/Points_2_partie_image.csv'
+file_path_3='/home/stage/M2-Stage-Liphy/Points_countour_image_450ml.csv'
 db=pd.read_csv(file_path)
 db2=pd.read_csv(file_path_2)
 db3=pd.read_csv(file_path_3)

@@ -13,7 +13,7 @@ from scipy.optimize import curve_fit
 import pandas as pd
 import math
 
-file_path='/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv'
+file_path='/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv'
 db=pd.read_csv(file_path)
 x=db.index/2
 y=(db['Media value concentration']/10000)*100/(db['Media value concentration'].max()/100)
@@ -33,7 +33,7 @@ popt
 
 ### Plotting
 
-plt.scatter(x, y, label='Remplissage colonne sans surfactant 300 ml eau pure', marker='o', s=1)
+plt.scatter(x, y, label='Remplissage 450 ml 70% cmc SDS avant', marker='o', s=1)
 plt.plot(x, func(x, *popt), 'r-', label='fit: D=%5.5f, t0=%5.5f' %tuple(popt))
 
 plt.xlabel('Time (s)', fontsize=20)

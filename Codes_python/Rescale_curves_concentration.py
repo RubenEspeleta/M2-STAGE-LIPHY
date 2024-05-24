@@ -30,6 +30,8 @@ file_paths=[#'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mo
             #'/home/stage/M2-Stage-Liphy/test_colonne_mai_vidange_8_co2.csv',
             '/home/stage/M2-Stage-Liphy/remplissage_300_ml_eau_no_surfactant_8_co2.csv',
             '/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv']
+            #'/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv',
+            #'/home/stage/M2-Stage-Liphy/vidange_600ml_eau_pur_mi_8_co2.csv']
 fig, ax = plt.subplots()
 for file_path in file_paths:
     db=pd.read_csv(file_path)
@@ -91,7 +93,14 @@ for file_path in file_paths:
             label='Vidange eau pure 300 ml mois du mai'
         else:
             label='Remplissage eau pure 300 ml mois du mai'
-
+    if '600' in file_path:
+         db=pd.read_csv(file_path)
+         y=(db['Media value concentration']/100)*100/(db['Media value concentration'].max()/100)
+        
+         if 'vidange' in file_path:
+             label='Vidange eau pure 600ml mois de mai'
+         else:
+            label='Remplissage eau pure 600ml mois de mai'      
 
 
 
