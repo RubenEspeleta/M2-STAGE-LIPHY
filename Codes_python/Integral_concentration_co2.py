@@ -16,14 +16,16 @@ file_paths=[#'/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colo
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_100424_vidange_23gL_8_co2.csv',
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_remplissage_8_co2.csv',   ### Tests avec 5 g/L SDS avec colorant (100%)
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_vidange_8_co2.csv',
-            '/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_remplissage_8_co2.csv',  ### Tests avec 70% de la CMC sans colorant
+            #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_remplissage_8_co2.csv',  ### Tests avec 70% de la CMC sans colorant
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
-            '/home/ruben/M2-THESE-RUBEN-LIPHY/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv'] ## Tests avec 450ml de SDS 70% de la CMC sans colorant
+            #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv'] ## Tests avec 450ml de SDS 70% de la CMC sans colorant
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_vidange_8_co2.csv',
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/test_colonne_sans_mousse_remplissage_8_co2.csv', ### Tests sans mousse pour comparer
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/test_colonne_sans_mousse_vidange_8_co2.csv',
             #'/home/ruben/M2-THESE-RUBEN-LIPHY/Test_eau_pure/test_colonne_3D_eau_pure_remplissage_8_co2.csv', ##  Test sans surfactant (eau pure)
-            #'/home/ruben/M2-THESE-RUBEN-LIPHY/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv']
+            #'/home/ruben/M2-THESE-RUBEN-LIPHY/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv'
+            ]
 fig, ax = plt.subplots()
 for file_path in file_paths:
     db=pd.read_csv(file_path)
@@ -66,7 +68,7 @@ for file_path in file_paths:
             label='Vidange sans mousse 300 ml eau pure'
         else:
             label='Remplissage sans mousse 300 ml eau pure'
-    if '450' in file_path:
+    if 'mai' in file_path:
          db=pd.read_csv(file_path)
          y=(db['Media value concentration']/100)*100/(db['Media value concentration'].max()/100)
         

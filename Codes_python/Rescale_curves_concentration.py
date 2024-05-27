@@ -22,14 +22,14 @@ file_paths=[#'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mo
             #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv', ## Tests avec 450ml de SDS 70% de la CMC sans colorant
             #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_vidange_8_co2.csv',
-            #'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_remplissage_8_co2.csv', ### Tests sans mousse pour comparer,
+            '/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_remplissage_8_co2.csv', ### Tests sans mousse pour comparer,
             #'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_vidange_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_remplissage_8_co2.csv', ##  Test sans surfactant (eau pure)
-            '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_remplissage_8_co2.csv'] ##  Test sans surfactant (eau pure)
+            #'/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_pure_vidange_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv',           ### Mois de mai
             #'/home/stage/M2-Stage-Liphy/test_colonne_mai_vidange_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/remplissage_300_ml_eau_no_surfactant_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv']
+            #'/home/stage/M2-Stage-Liphy/remplissage_300_ml_eau_no_surfactant_8_co2.csv',
+            #'/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv']
             #'/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/vidange_600ml_eau_pur_mi_8_co2.csv']
 fig, ax = plt.subplots()
