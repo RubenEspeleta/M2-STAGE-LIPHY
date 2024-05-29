@@ -33,46 +33,46 @@ for file_path in file_paths:
         if 'vidange' in file_path:
             #y=(db['Media value concentration']/100)/(db['Media value concentration'].max()/100)
             label='Vidange sans mousse 2eme experience'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='k', marker='*', s=1)
+            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='k', marker='x', s=1)
         else:
             #y=(db['Media value concentration']/100)/(db['Media value concentration'].max()/100)
             label='Remplissage sans mousse 2eme experience'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='k', marker='o', s=1)
+            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='k', marker='v', s=1)
     if 'sans' in file_path:
         if 'vidange' in file_path:
             label='Vidange sans mousse'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='m', marker='x', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='*', s=10)
         else:
             label='Remplissage sans mousse'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2',color='m', marker='v', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='o', s=10)
     
     if 'surfactant' in file_path:
         if 'vidange' in file_path:
             label='Vidange 300 ml eau sans surfactant 2eme experience'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='b', marker='*', s=1)
+            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='b', marker='x', s=1)
         else:
             label='Remplissage 300 ml eau sans surfactant 2eme experience'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='b', marker='o', s=1)
+            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='b', marker='v', s=1)
     if 'pure' in file_path:
         if 'vidange' in file_path:
             label='Vidange 300 ml eau sans surfactant'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='m', marker='x', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='*', s=10)
         else:
             label='Remplissage 300 ml eau sans surfactant'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='m', marker='v', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='o', s=10)
     if '160424' in file_path:
         if 'vidange' in file_path:
             label='Vidange 1.7 g/L (70% CMC)'
             #y=(db['Media value concentration']/100)/(db['Media value concentration'].max()/100)
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='m', marker='*', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='*', s=10)
         else:
             label='Remplissage 1.7 g/L (70% CMC)'
             #y=(db['Media value concentration']/100)/(db['Media value concentration'].max()/100)
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='m', marker='o', s=1)
+            plt.scatter(x[::300], y[::300], label=f'{label} {percentage*10} ml/min CO2', color='m', marker='o', s=10)
     if 'SDS' in file_path:
         if 'vidange' in file_path:
             label='Vidange 1.7 g/L (70% CMC) 2eme experience'
-            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='r', marker='*', s=1)
+            plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='r', marker='x', s=1)
         else:
             label='Remplissage 1.7 g/L (70% CMC) 2eme experience'
             plt.scatter(x, y, label=f'{label} {percentage*10} ml/min CO2', color='r', marker='v', s=1)
@@ -81,7 +81,7 @@ for file_path in file_paths:
 
 plt.xlabel('Time (s)', fontsize=20)
 plt.ylabel('Concentration $CO_2$ (%)', fontsize=20)
-plt.legend(loc='lower right', fontsize='x-large',markerscale=10)
+plt.legend(loc='lower right', fontsize='x-large',markerscale=5)
 plt.xticks(fontsize=20)
 plt.yticks(fontsize=20)
 plt.show()
