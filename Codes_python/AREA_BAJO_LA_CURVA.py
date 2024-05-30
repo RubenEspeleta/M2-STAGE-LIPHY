@@ -9,7 +9,7 @@ Created on Mon May 27 16:18:05 2024
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-file_path='/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv'
+file_path='/home/stage/M2-Stage-Liphy/remplissage_mousse_SDS_70_CMC_300ml_8_co2.csv'
 
 Q=80/(60*(1000**2)) 
 
