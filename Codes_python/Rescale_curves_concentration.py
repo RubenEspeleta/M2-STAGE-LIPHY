@@ -16,8 +16,8 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes, mark_inset
 ### Fichier pour les tests
 file_paths=[#'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_100424_remplissage_23gL_8_co2.csv',    ##### Tests avec 2.3 g/L SDS avec colorant
             #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_100424_vidange_23gL_8_co2.csv',
-            #'/home/ruben/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_remplissage_8_co2.csv',   ### Tests avec 5 g/L SDS avec colorant (100%)
-            #'/home/ruben/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_vidange_8_co2.csv',
+            '/home/ruben/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_remplissage_8_co2.csv',   ### Tests avec 5 g/L SDS avec colorant (100%)
+            '/home/ruben/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_vidange_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_remplissage_8_co2.csv',  ### Tests avec 70% de la CMC sans colorant
             #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
             #'/home/stage/M2-Stage-Liphy/Test_450ml_SDS_70percentage_CMC/test_colonne_mousse_3D_450ml_liquide_remplissage_8_co2.csv', ## Tests avec 450ml de SDS 70% de la CMC sans colorant

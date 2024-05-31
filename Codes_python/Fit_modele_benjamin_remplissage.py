@@ -32,7 +32,7 @@ v=Q/A
 #     db=pd.read_csv(file_path)
 #     y=db['Media value concentration']/10000
 #     if 
-file_path='/home/stage/M2-Stage-Liphy/test_colonne_mai_remplissage_8_co2.csv'
+file_path='/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv'
 db=pd.read_csv(file_path)
 x=db.index/2
 y=db['Media value concentration']/10000

@@ -23,7 +23,7 @@ Q=80/(60*1000**2)    ## Debit imposé en m3/s
 A=0.125*0.09        ## Area de la section transversale de la colonne en m2
 v=Q/A
 
-file_path='/home/stage/M2-Stage-Liphy/remplissage_mousse_SDS_70_CMC_300ml_8_co2.csv'
+file_path='/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv'
 db=pd.read_csv(file_path)
 x=db.index/2
 y=db['Media value concentration']/10000
