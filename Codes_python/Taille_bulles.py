@@ -8,9 +8,9 @@ Created on Thu Mar  7 16:59:18 2024
 
 import pandas as pd
 import matplotlib.pyplot as plt
-file_path='/home/ruben/M2-THESE-RUBEN-LIPHY/11-03-24-deuxieme-aiguille-hydrophobe-bullage/Results-bulles.csv'
-file_path2='/home/ruben/M2-THESE-RUBEN-LIPHY/Results_tailles_des_bulles_1-7mm-aiguille.csv'
-#file_path2='/home/ruben/M2-THESE-RUBEN-LIPHY/Results_tailles_des_bulles_1-35mm-aiguille-1fps.csv'
+file_path='/home/stage/M2-Stage-Liphy/11-03-24-deuxieme-aiguille-hydrophobe-bullage/Results-bulles.csv'
+file_path2='/home/stage/M2-Stage-Liphy/Results_tailles_des_bulles_1-7mm-aiguille.csv'
+#file_path2='/home/stage/M2-Stage-Liphy/Results_tailles_des_bulles_1-35mm-aiguille-1fps.csv'
 db=pd.read_csv(file_path)
 db2=pd.read_csv(file_path2)
 
