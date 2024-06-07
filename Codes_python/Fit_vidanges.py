@@ -13,48 +13,57 @@ from scipy.optimize import curve_fit
 import pandas as pd
 import math
 
-file_paths=['/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_vidange_8_co2.csv',
-            '/home/stage/M2-Stage-Liphy/test_colonne_no_foam_vidange_8_co2.csv',
+file_paths=[#'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_vidange_8_co2.csv',
+            #'/home/stage/M2-Stage-Liphy/test_colonne_no_foam_vidange_8_co2.csv',
             
-           '/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_alone_vidange_8_co2.csv' ,
-           '/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv',
+            '/home/stage/M2-Stage-Liphy/vidange_sin_nada_8_co2.csv',
+            
+           #'/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_alone_vidange_8_co2.csv' ,
+           #'/home/stage/M2-Stage-Liphy/vidange_300_ml_eau_no_surfactant_8_co2.csv',
            
-           '/home/stage/M2-Stage-Liphy/vidange_600ml_eau_pur_mi_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_600ml_eau_pur_mi_8_co2.csv',
            
-           '/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
-           '/home/stage/M2-Stage-Liphy/vidange_mousse_SDS_70_CMC_300ml_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_vidange_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_mousse_SDS_70_CMC_300ml_8_co2.csv',
            
            
-           '/home/stage/M2-Stage-Liphy/vidange_mousse_70CMC_600ml_plus_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_mousse_70CMC_600ml_plus_8_co2.csv',
            
-           '/home/stage/M2-Stage-Liphy/vidange_300ml_5gL_8_co2.csv',
-           '/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_vidange_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_300ml_5gL_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_vidange_8_co2.csv',
            
-           '/home/stage/M2-Stage-Liphy/vidange_600ml_cinqgramesparlittre_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_600ml_cinqgramesparlittre_8_co2.csv',
            
-           '/home/stage/M2-Stage-Liphy/vidange_aspiro_300ml_3point5_8_co2.csv',
-           '/home/stage/M2-Stage-Liphy/vidange_CO2_600ml_aspiro_035gparL.csv'
+           #'/home/stage/M2-Stage-Liphy/vidange_aspiro_300ml_3point5_8_co2.csv',
+           #'/home/stage/M2-Stage-Liphy/vidange_CO2_600ml_aspiro_035gparL.csv'
             ]
 
 Q=80/(60*1000**2)    ## Debit imposé en m3/s
 A=0.125*0.09        ## Area de la section transversale de la colonne en m2
 v=Q/A
 
+
+
 for file_path in file_paths:
     db=pd.read_csv(file_path)
     x=db.index/2
     y=db['Media value concentration']/10000
     y=(db['Media value concentration']/10000)*100/(db['Media value concentration'].max()/100)
-
+    def func(x, b):
+        a=1
+        return a * np.exp(-b * x)
     
-    
+    popt, pcov=curve_fit(func, x, y )
+    popt
    ## Sans mousse 
     if 'sans' in file_path:
-        label='CO2 filling without foaming'
+        label='CO2 emptying without foaming'
         plt.scatter(x, y, label=f'{label} ', color='k', marker='o', s=1)
     if 'foam' in file_path:
         plt.scatter(x[::100], y[::100], color='k', marker='o', s=1)
-   
+    if 'nada' in file_path:
+        label='CO2 emptying without foaming'
+        plt.scatter(x, y, label=f'{label} ', color='k', marker='o', s=1)   
     ### Avec de l'eau sans surfactant
     
     if 'surfactant' in file_path:
@@ -96,7 +105,7 @@ for file_path in file_paths:
     if '035gparL' in file_path:
         label='600 ml ASPIRO 3.5 g/L'
         plt.scatter(x, y, label=f'{label} ', c='xkcd:dark red', marker='o', s=1)
-    
+    plt.plot(x, func(x, *popt), label=f'fit {label}: b={popt[0]:.5f}')
 
 plt.xlabel('Time (s)', fontsize=20)
 plt.ylabel('Concentration $CO_2$ (%)', fontsize=20)
