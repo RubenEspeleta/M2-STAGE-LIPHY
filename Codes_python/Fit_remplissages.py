@@ -19,22 +19,23 @@ file_paths=[#'/home/stage/M2-Stage-Liphy/test_colonne_sans_mousse_remplissage_8_
             
            #'/home/stage/M2-Stage-Liphy/Test_eau_pure/test_colonne_3D_eau_alone_remplissage_8_co2.csv' ,
            #'/home/stage/M2-Stage-Liphy/remplissage_300_ml_eau_no_surfactant_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_nuevo_300ml_agua_sola_8_co2.csv',
            
-           #'/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_600ml_eau_pur_mi_8_co2.csv',
            
-           #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_remplissage_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_160424_70cmc_remplissage_8_co2.csv',
            #'/home/stage/M2-Stage-Liphy/remplissage_mousse_SDS_70_CMC_300ml_8_co2.csv',
            
            
-           #'/home/stage/M2-Stage-Liphy/remplissage_mousse_70CMC_600ml_plus_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_mousse_70CMC_600ml_plus_8_co2.csv',
            
-           #'/home/stage/M2-Stage-Liphy/remplissage_300ml_5gL_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_300ml_5gL_8_co2.csv',
            #'/home/stage/M2-Stage-Liphy/Tests_colonne_mousse_3D/test_colonne_mousse_3D_coloree_040324_remplissage_8_co2.csv',
            
-           #'/home/stage/M2-Stage-Liphy/remplissage_600ml_cinqgramesparlittre_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_600ml_cinqgramesparlittre_8_co2.csv',
            
-           #'/home/stage/M2-Stage-Liphy/remplissage_aspiro_300ml_3point5_8_co2.csv',
-           #'/home/stage/M2-Stage-Liphy/remplissage_CO2_600ml_aspiro_035gparL.csv'
+           '/home/stage/M2-Stage-Liphy/remplissage_aspiro_300ml_3point5_8_co2.csv',
+           '/home/stage/M2-Stage-Liphy/remplissage_CO2_600ml_aspiro_035gparL.csv'
             ]
 
 Q=80/(60*1000**2)    ## Debit imposé en m3/s
@@ -71,6 +72,10 @@ for file_path in file_paths:
     if 'surfactant' in file_path:
         label='300 ml water without surfactant'
         plt.scatter(x, y, label=f'{label} ', c='xkcd:carolina blue', marker='o', s=1)
+    
+    if 'nuevo' in file_path:
+        label='300 ml water without surfactant'
+        plt.scatter(x, y, label=f'{label} ', c='xkcd:carolina blue', marker='o', s=1)
     if 'alone' in file_path:
         plt.scatter(x[::100], y[::100], c='xkcd:carolina blue', marker='o', s=1)
     
@@ -86,7 +91,8 @@ for file_path in file_paths:
         y=db['Media value concentration']/10000
         plt.scatter(x, y, label=f'{label} ', color='orchid', marker='o', s=1)
     if '160424' in file_path:
-        plt.scatter(x[::100], y[::100], c='orchid', marker='o', s=1)
+        label='300 ml 1.7 g/L SDS'
+        plt.scatter(x, y, label=f'{label} ', color='orchid', marker='o', s=1)
           
     if 'plus' in file_path:
         label='600 ml 1.7 g/L SDS'
@@ -111,11 +117,11 @@ for file_path in file_paths:
     #plt.scatter(x, y, label=f'{label} ', marker='o', s=1)
     plt.plot(x, func(x, *popt), label='fit: D=%5.8f' %tuple(popt))
 
-plt.xlabel('Time (s)', fontsize=20)
-plt.ylabel('Concentration $CO_2$ (%)', fontsize=20)
-plt.legend(loc='lower right', fontsize='x-large',markerscale=10)
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
+plt.xlabel('Time (s)', fontsize=40)
+plt.ylabel('Concentration $CO_2$ (%)', fontsize=40)
+plt.legend(loc='lower right', fontsize='xx-large',markerscale=20)
+plt.xticks(fontsize=40)
+plt.yticks(fontsize=40)
 plt.show()
 
 # mask= y <= 0.6
