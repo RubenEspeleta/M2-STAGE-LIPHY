@@ -30,6 +30,12 @@ Brunt, K.~M., Fricker, H.~A., Padman, L., Scambos, T.~A., and O’Neel, S.
   icesat laser altimetry.
 \newblock {\em Annals of Glaciology}, 51(55):71--79.
 
+\bibitem[Cantat et~al., 2013]{cantat2013foams}
+Cantat, I., Cohen-Addad, S., Elias, F., Graner, F., H{\"o}hler, R., Pitois, O.,
+  Rouyer, F., and Saint-Jalmes, A. (2013).
+\newblock {\em Foams: structure and dynamics}.
+\newblock OUP Oxford.
+
 \bibitem[Cheng et~al., 2019]{cheng2019full}
 Cheng, G., L{\"o}tstedt, P., and von Sydow, L. (2019).
 \newblock A full stokes subgrid model for simulation of grounding line
@@ -53,6 +59,12 @@ Courant, R., Friedrichs, K., and Lewy, H. (1967).
 \newblock On the partial difference equations of mathematical physics.
 \newblock {\em IBM journal of Research and Development}, 11(2):215--234.
 
+\bibitem[Duan et~al., 2023]{duan2023recent}
+Duan, F., Zhu, Y., Mu, B., and Wang, A. (2023).
+\newblock Recent progress and future prospects on aqueous foams stabilized
+  based on clay minerals.
+\newblock {\em Applied Clay Science}, 236:106885.
+
 \bibitem[Durand et~al., 2009a]{durand2009marine}
 Durand, G., Gagliardini, O., De~Fleurian, B., Zwinger, T., and Le~Meur, E.
   (2009a).
@@ -70,6 +82,12 @@ Durand, G., Gagliardini, O., Zwinger, T., Le~Meur, E., and Hindmarsh, R.~C.
 Earle, S. (2015).
 \newblock {\em Physical geology}.
 \newblock BCcampus.
+
+\bibitem[Farajzadeh et~al., 2009]{farajzadeh2009comparative}
+Farajzadeh, R., Andrianov, A., Bruining, H., and Zitha, P.~L. (2009).
+\newblock Comparative study of co2 and n2 foams in porous media at low and high
+  pressure- temperatures.
+\newblock {\em Industrial \& Engineering Chemistry Research}, 48(9):4542--4552.
 
 \bibitem[Fricker et~al., 2009]{fricker2009mapping}
 Fricker, H.~A., Coleman, R., Padman, L., Scambos, T.~A., Bohlander, J., and
@@ -95,6 +113,11 @@ Goldberg, D., Snow, K., Holland, P., Jordan, J., Campin, J.-M., Heimbach, P.,
 \newblock Representing grounding line migration in synchronous coupling between
   a marine ice sheet model and a z-coordinate ocean model.
 \newblock {\em Ocean Modelling}, 125:45--60.
+
+\bibitem[Hadji et~al., 2024]{hadji2024soap}
+Hadji, C., Dollet, B., Coasne, B., and Lorenceau, E. (2024).
+\newblock Soap-film membranes for co2/air separation.
+\newblock {\em Langmuir}, 40(2):1327--1334.
 
 \bibitem[Hanna et~al., 2013]{hanna2013white}
 Hanna, E., Navarro, F., Pattyn, F., Domingues, C., Fettweis, X., Ivins, E.,
@@ -130,6 +153,12 @@ Konrad, H., Shepherd, A., Gilbert, L., Hogg, A.~E., McMillan, M., Muir, A., and
   Slater, T. (2018).
 \newblock Net retreat of antarctic glacier grounding lines.
 \newblock {\em Nature Geoscience}, 11(4):258--262.
+
+\bibitem[Langevin, 2017]{langevin2017aqueous}
+Langevin, D. (2017).
+\newblock Aqueous foams and foam films stabilised by surfactants. gravity-free
+  studies.
+\newblock {\em Comptes Rendus. M{\'e}canique}, 345(1):47--55.
 
 \bibitem[MacAyeal, 1989]{macayeal1989large}
 MacAyeal, D.~R. (1989).
